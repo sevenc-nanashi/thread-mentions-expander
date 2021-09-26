@@ -32,18 +32,22 @@ module Core
   class << self
     def fetch_mentions(message)
       message.content.scan(/(.{,5})<#(\d+)>(.{,5})/).map do |before, id, after|
-        thread = @client.channels[id] || @client.fetch_channel(id).wait
+        begin
+          thread = @client.channels[id] || @client.fetch_channel(id).wait
+        rescue Discord::Forbidden
+          nil
+        else
+          next if thread.nil?
 
-        next if thread.nil?
-
-        Mention.new(
-          id,
-          thread.name,
-          "https://discord.com/channels/#{message.guild.id}/#{id}",
-          before,
-          after
-        )
+          Mention.new(
+            id,
+            thread.name,
+            "https://discord.com/channels/#{message.guild.id}/#{id}",
+            before,
+            after
+          )
+        end
       end
-    end
+    end.filter { |mention| !mention.nil? }
   end
 end
