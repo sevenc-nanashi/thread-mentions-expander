@@ -1,30 +1,15 @@
-# thread-mentions
+# Thread Mentions Expander
 
-Welcome to your bot: thread-mentions!
+スレッドのメンションのリンクを出すBotです。
 
-TODO: Write your bot's description here.
+## 使い方
 
-## Usage
+右クリックメニューの「スレッドのメンションを表示」、または`:thread:`リアクションでメンションを表示します。
 
-TODO: Write your bot's usage here.
+## セルフホスト
 
-## Features
 
-TODO: Write your bot's features here.
 
-## How to host
+## ライセンス
 
-1. Clone the repository.
-2. Run `bundle install`.
-3. Get your bot's token from the Discord developer portal.
-4. Copy `.env.sample` to `.env` and fill in the token.
-5. Run `bundle exec discorb run`.
-
-TODO: Write your own customizations here.
-
-## License
-
-TODO: Write your bot's license here.
-  See https://choosealicense.com/ for more information.
-  https://rubygems.org/gems/license-cli may be useful.
-
+MIT Licenseで公開しています。
