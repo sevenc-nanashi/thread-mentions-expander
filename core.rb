@@ -34,7 +34,7 @@ module Core
       message.content.scan(/(.{,5})<#(\d+)>(.{,5})/).map do |before, id, after|
         begin
           thread = @client.channels[id] || @client.fetch_channel(id).wait
-        rescue Discord::Forbidden
+        rescue Discorb::Forbidden
           nil
         else
           next if thread.nil?
