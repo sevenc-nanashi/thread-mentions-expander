@@ -1,12 +1,16 @@
 require "discorb"
 require "dotenv"
 
-Dotenv.load  # Loads .env file
+Dotenv.load
 
-client = Discorb::Client.new  # Create client for connecting to Discord
+client = Discorb::Client.new
 
 client.once :standby do
-  puts "Logged in as #{client.user}"  # Prints username of logged in user
+  puts "Logged in as #{client.user}"
 end
 
-client.run ENV["TOKEN"]  # Starts client
+load "./core.rb"
+
+client.extend Core
+
+client.run ENV["TOKEN"]
