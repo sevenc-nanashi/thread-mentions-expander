@@ -8,7 +8,9 @@
 
 ## セルフホスト
 
-
+1. `bundle install`で依存ライブラリをインストール
+2. `discorb setup`でコマンドをセットアップ
+3. `discorb run`で起動
 
 ## ライセンス
 
