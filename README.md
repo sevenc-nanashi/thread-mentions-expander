@@ -1,4 +1,5 @@
 # Thread Mentions Expander
+[![招待](https://img.shields.io/badge/Bot-Invite-5865f2?logo=discord&logoColor=fff&labelColor=36393f&style=for-the-badge)](https://discord.com/api/oauth2/authorize?client_id=891541907480641577&permissions=1024&scope=bot%20applications.commands)
 
 スレッドのメンションのリンクを出すBotです。
 
