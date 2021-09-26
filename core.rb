@@ -47,7 +47,7 @@ module Core
             after
           )
         end
-      end
-    end.filter { |mention| !mention.nil? }
+      end.filter { |mention| !mention.nil? }
+    end
   end
 end
